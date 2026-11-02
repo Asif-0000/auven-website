@@ -1,0 +1,243 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17243B;
+    background: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #E8ECF2;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #17243B;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.brand span,
+footer strong span {
+    color: #2864C5;
+}
+
+.header nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #526078;
+    font-size: 14px;
+}
+
+.header-button,
+.button {
+    background: #17243B;
+    color: white;
+    padding: 14px 21px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.hero {
+    padding: 110px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    background: #F5F7FA;
+}
+
+.tag {
+    color: #2864C5;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: #2864C5;
+}
+
+.hero-content p,
+.contact p {
+    color: #68768C;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 520px;
+}
+
+.hero-box {
+    background: #17243B;
+    color: white;
+    padding: 55px 35px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-box span {
+    color: #9BBBF0;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero-box h2 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin: 22px 0;
+}
+
+.hero-box p {
+    color: #C4CDDA;
+    font-size: 14px;
+}
+
+.services {
+    padding: 90px 8%;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    margin: 18px 0 35px;
+    max-width: 650px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #E5EAF2;
+}
+
+.service-card span {
+    color: #2864C5;
+    font-weight: bold;
+}
+
+.service-card h3 {
+    margin: 25px 0 12px;
+}
+
+.service-card p {
+    color: #68768C;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about {
+    padding: 90px 8%;
+    background: #F5F7FA;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about h2 {
+    margin-bottom: 0;
+}
+
+.about > p {
+    color: #68768C;
+    line-height: 1.9;
+}
+
+.contact {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.contact h2 {
+    margin: 20px auto;
+}
+
+.contact p {
+    margin: 0 auto 25px;
+}
+
+footer {
+    background: #17243B;
+    color: white;
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer p {
+    color: #C4CDDA;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .header nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .hero,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}

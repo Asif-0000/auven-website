@@ -1,0 +1,824 @@
+
+/* ==============================
+   PULSE DIGITAL - BASE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F7F8FA;
+    color: #101828;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.digital-label {
+    display: inline-block;
+    color: #3867FF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.digital-navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.digital-logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.digital-logo span {
+    color: #3867FF;
+}
+
+.digital-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.digital-nav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #667085;
+    transition: color 0.3s ease;
+}
+
+.digital-nav a:hover {
+    color: #3867FF;
+}
+
+.digital-nav-button {
+    padding: 12px 19px;
+    background: #101828;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.digital-nav-button:hover {
+    background: #3867FF;
+}
+
+.digital-nav-button span {
+    margin-left: 7px;
+}
+
+
+/* ==============================
+   HERO SECTION
+============================== */
+
+.digital-hero {
+    min-height: 650px;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+    background: #F7F8FA;
+}
+
+.digital-hero-content {
+    max-width: 590px;
+}
+
+.digital-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 13px;
+    border: 1px solid #E4E7EC;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #475467;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #3867FF;
+    border-radius: 50%;
+}
+
+.digital-hero h1 {
+    margin: 27px 0 20px;
+    font-size: clamp(42px, 5.2vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    font-weight: 800;
+}
+
+.digital-hero h1 span {
+    color: #3867FF;
+}
+
+.digital-hero-content > p {
+    max-width: 460px;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.digital-hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.digital-primary-button {
+    display: inline-block;
+    padding: 15px 23px;
+    background: #3867FF;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.digital-primary-button:hover {
+    background: #244EDB;
+    transform: translateY(-3px);
+}
+
+.digital-secondary-button {
+    padding: 14px 18px;
+    border: 1px solid #D0D5DD;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.digital-secondary-button:hover {
+    border-color: #3867FF;
+    color: #3867FF;
+}
+
+.digital-trust {
+    margin-top: 48px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #98A2B3;
+}
+
+.digital-trust span {
+    margin: 0 8px;
+    color: #3867FF;
+}
+
+
+/* ==============================
+   HERO VISUAL
+============================== */
+
+.digital-hero-visual {
+    min-height: 390px;
+    padding: 25px;
+    background: #101828;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.visual-top,
+.visual-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    color: #AAB4C5;
+    z-index: 2;
+}
+
+.visual-main {
+    position: relative;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.visual-circle {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: 0;
+    top: 10px;
+    border-radius: 50%;
+    background: #3867FF;
+    opacity: 0.95;
+}
+
+.visual-message {
+    position: relative;
+    z-index: 1;
+}
+
+.visual-message span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #D0D9FF;
+}
+
+.visual-message h2 {
+    margin-top: 12px;
+    font-size: 55px;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+
+/* ==============================
+   SECTION HEADINGS
+============================== */
+
+.digital-section-heading {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.digital-section-heading h2 {
+    margin-top: 13px;
+    font-size: clamp(30px, 4vw, 43px);
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+}
+
+.digital-section-heading p {
+    margin-top: 13px;
+    color: #667085;
+    font-size: 14px;
+    max-width: 460px;
+}
+
+
+/* ==============================
+   SERVICES
+============================== */
+
+.digital-services {
+    padding: 110px 8%;
+    background: #FFFFFF;
+}
+
+.digital-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.digital-service-card {
+    position: relative;
+    min-height: 290px;
+    padding: 30px;
+    border: 1px solid #EAECF0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.digital-service-card:hover {
+    border-color: #3867FF;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(16, 24, 40, 0.07);
+}
+
+.service-number {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #98A2B3;
+}
+
+.service-icon {
+    width: 47px;
+    height: 47px;
+    margin: 30px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EEF2FF;
+    color: #3867FF;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.digital-service-card h3 {
+    font-size: 19px;
+    letter-spacing: -0.5px;
+}
+
+.digital-service-card p {
+    margin-top: 10px;
+    max-width: 280px;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.service-arrow {
+    position: absolute;
+    right: 28px;
+    bottom: 27px;
+    color: #3867FF;
+    font-size: 20px;
+}
+
+
+/* ==============================
+   SELECTED WORK
+============================== */
+
+.digital-work {
+    padding: 110px 8%;
+    background: #F7F8FA;
+}
+
+.digital-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.digital-work-card {
+    min-width: 0;
+}
+
+.work-preview {
+    height: 310px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.digital-work-card:hover .work-preview {
+    transform: translateY(-5px);
+}
+
+.work-preview > span {
+    position: relative;
+    z-index: 2;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.work-preview h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+.work-one .work-preview {
+    background: #DDE7FF;
+    color: #172B55;
+}
+
+.work-two .work-preview {
+    background: #E9E4DC;
+    color: #34312D;
+}
+
+.work-three .work-preview {
+    background: #D9E9E7;
+    color: #163B3A;
+}
+
+.work-shape {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    right: -35px;
+    top: 65px;
+    border-radius: 50%;
+    background: rgba(56, 103, 255, 0.15);
+}
+
+.work-two .work-shape {
+    width: 170px;
+    height: 220px;
+    border-radius: 90px 90px 5px 5px;
+    background: rgba(102, 84, 62, 0.13);
+    transform: rotate(25deg);
+}
+
+.work-three .work-shape {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    background: rgba(22, 59, 58, 0.13);
+    transform: rotate(45deg);
+}
+
+.work-info {
+    padding: 18px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.work-info h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.work-info span {
+    color: #667085;
+    font-size: 11px;
+    text-align: right;
+}
+
+.digital-demo-note {
+    margin-top: 25px;
+    color: #98A2B3;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+/* ==============================
+   ABOUT
+============================== */
+
+.digital-about {
+    padding: 110px 8%;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 100px;
+    background: #FFFFFF;
+}
+
+.digital-about-left h2 {
+    max-width: 480px;
+    margin-top: 20px;
+    font-size: clamp(35px, 4vw, 49px);
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.digital-about-left h2 span {
+    color: #3867FF;
+}
+
+.digital-about-right {
+    padding-top: 35px;
+}
+
+.digital-about-right p {
+    margin-bottom: 20px;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.digital-text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #3867FF;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #3867FF;
+    padding-bottom: 5px;
+}
+
+
+/* ==============================
+   CONTACT
+============================== */
+
+.digital-contact {
+    padding: 110px 8%;
+    text-align: center;
+    background: #101828;
+    color: #FFFFFF;
+}
+
+.digital-contact .digital-label {
+    color: #8EA7FF;
+}
+
+.digital-contact h2 {
+    margin: 22px 0;
+    font-size: clamp(42px, 6vw, 66px);
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+}
+
+.digital-contact h2 span {
+    color: #6D8FFF;
+}
+
+.digital-contact p {
+    margin-bottom: 30px;
+    color: #AAB4C5;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.digital-footer {
+    padding: 35px 8% 20px;
+    background: #0B1220;
+    color: #FFFFFF;
+}
+
+.digital-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #293548;
+}
+
+.digital-footer-top p {
+    color: #AAB4C5;
+    font-size: 12px;
+}
+
+.digital-footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #98A2B3;
+    font-size: 10px;
+}
+
+
+/* ==============================
+   ACCESSIBILITY
+============================== */
+
+a:focus-visible {
+    outline: 3px solid #3867FF;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* ==============================
+   RESPONSIVE - TABLET
+============================== */
+
+@media (max-width: 900px) {
+
+    .digital-navbar {
+        padding: 0 5%;
+    }
+
+    .digital-hero,
+    .digital-services,
+    .digital-work,
+    .digital-about,
+    .digital-contact {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .digital-hero {
+        gap: 35px;
+    }
+
+    .digital-hero h1 {
+        font-size: 48px;
+    }
+
+    .digital-services-grid,
+    .digital-work-grid {
+        gap: 14px;
+    }
+
+    .digital-service-card {
+        padding: 23px;
+    }
+
+    .work-preview {
+        height: 270px;
+        padding: 20px;
+    }
+
+    .work-preview h3 {
+        font-size: 31px;
+    }
+
+    .digital-about {
+        gap: 50px;
+    }
+
+}
+
+
+/* ==============================
+   RESPONSIVE - MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+    .digital-navbar {
+        min-height: 72px;
+        padding: 0 6%;
+    }
+
+    .digital-nav {
+        display: none;
+    }
+
+    .digital-logo {
+        font-size: 24px;
+    }
+
+    .digital-nav-button {
+        padding: 10px 14px;
+        font-size: 11px;
+    }
+
+    .digital-hero {
+        grid-template-columns: 1fr;
+        padding: 75px 6%;
+        gap: 45px;
+    }
+
+    .digital-hero h1 {
+        font-size: clamp(42px, 10vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .digital-hero-visual {
+        min-height: 340px;
+    }
+
+    .visual-main {
+        min-height: 220px;
+    }
+
+    .visual-circle {
+        width: 190px;
+        height: 190px;
+    }
+
+    .visual-message h2 {
+        font-size: 48px;
+    }
+
+    .digital-services,
+    .digital-work,
+    .digital-about,
+    .digital-contact {
+        padding: 80px 6%;
+    }
+
+    .digital-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .digital-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .digital-service-card {
+        min-height: 250px;
+    }
+
+    .digital-work-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .work-preview {
+        height: 330px;
+    }
+
+    .work-preview h3 {
+        font-size: 40px;
+    }
+
+    .digital-about {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .digital-about-right {
+        padding-top: 10px;
+    }
+
+    .digital-contact h2 {
+        font-size: 46px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 400px) {
+
+    .digital-hero h1 {
+        font-size: 39px;
+    }
+
+    .digital-hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .digital-hero-visual {
+        padding: 18px;
+    }
+
+    .visual-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .visual-message h2 {
+        font-size: 40px;
+    }
+
+    .work-preview {
+        height: 280px;
+    }
+
+    .work-info {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .work-info span {
+        text-align: left;
+    }
+
+    .digital-footer-top,
+    .digital-footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

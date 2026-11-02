@@ -1,0 +1,578 @@
+
+/* =========================
+   1. GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F7F5F0;
+    color: #292821;
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.interior-tag {
+    display: inline-block;
+    color: #8A806F;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   2. NAVIGATION
+========================= */
+
+.interior-header {
+    min-height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F7F5F0;
+}
+
+.interior-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.interior-logo span {
+    color: #A47B53;
+}
+
+.interior-nav {
+    display: flex;
+    gap: 35px;
+}
+
+.interior-nav a {
+    font-size: 13px;
+    color: #625F57;
+    transition: color 0.3s ease;
+}
+
+.interior-nav a:hover {
+    color: #A47B53;
+}
+
+.interior-header-button {
+    padding: 12px 23px;
+    background: #292821;
+    color: white;
+    font-size: 12px;
+    transition: background 0.3s ease;
+}
+
+.interior-header-button:hover {
+    background: #A47B53;
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.interior-hero {
+    min-height: 610px;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.interior-hero-content h1 {
+    margin: 25px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.interior-hero-content h1 em,
+.interior-about-content h2 em,
+.interior-contact h2 em {
+    color: #A47B53;
+    font-weight: 400;
+}
+
+.interior-hero-content p {
+    max-width: 400px;
+    color: #77736B;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.interior-button {
+    display: inline-block;
+    padding: 16px 25px;
+    background: #292821;
+    color: white;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.interior-button:hover {
+    background: #A47B53;
+    transform: translateY(-3px);
+}
+
+
+.interior-hero-visual {
+    width: 100%;
+    min-width: 0;
+    min-height: 450px;
+
+    background-image:
+        linear-gradient(
+            180deg,
+            transparent 65%,
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("images/forma-hero.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+}
+
+
+.interior-visual-label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   4. PROJECTS SECTION
+========================= */
+
+.interior-projects {
+    padding: 110px 8%;
+    background: #FFFFFF;
+}
+
+.interior-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.interior-section-heading h2 {
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.interior-section-heading > p {
+    max-width: 330px;
+    color: #77736B;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.interior-project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.interior-project-card {
+    min-width: 0;
+}
+
+.project-image {
+    height: 310px;
+    transition: transform 0.4s ease;
+}
+
+.interior-project-card:hover .project-image {
+    transform: scale(1.02);
+}
+
+
+.project-one {
+    background-image: url("images/project-modern.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-two {
+    background-image: url("images/project-workspace.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-three {
+    background-image: url("images/project-minimal.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-details {
+    padding: 20px 0;
+}
+
+.project-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.project-details span {
+    color: #8A806F;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   5. ABOUT SECTION
+========================= */
+
+.interior-about {
+    padding: 110px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+
+.interior-about-visual {
+    min-height: 460px;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 60%,
+            rgba(0, 0, 0, 0.3)
+        ),
+        url("images/forma-about.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+}
+
+
+.interior-about-visual span {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.interior-about-content h2 {
+    margin: 25px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.interior-about-content p {
+    color: #77736B;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.interior-text-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #A47B53;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #A47B53;
+    padding-bottom: 6px;
+}
+
+
+/* =========================
+   6. CONTACT SECTION
+========================= */
+
+.interior-contact {
+    padding: 110px 8%;
+    text-align: center;
+    background: #EAE5DC;
+}
+
+.interior-contact h2 {
+    margin: 25px 0 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.interior-contact p {
+    margin-bottom: 30px;
+    color: #77736B;
+    font-size: 14px;
+}
+
+
+/* =========================
+   7. FOOTER
+========================= */
+
+.interior-footer {
+    padding: 45px 8% 25px;
+    background: #292821;
+    color: white;
+}
+
+.interior-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.interior-footer .interior-logo {
+    color: white;
+}
+
+.interior-footer-top p {
+    color: #B7B1A6;
+    font-size: 12px;
+}
+
+.interior-footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #49473F;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #A7A397;
+    font-size: 11px;
+}
+
+
+
+/* =========================
+   8. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .interior-hero {
+        gap: 35px;
+    }
+
+    .interior-about {
+        gap: 40px;
+    }
+
+    .interior-project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .interior-header {
+        padding: 20px 6%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .interior-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .interior-hero {
+        padding: 65px 6%;
+        grid-template-columns: 1fr;
+    }
+
+    .interior-hero-visual {
+        min-height: 350px;
+    }
+
+    .interior-projects,
+    .interior-about {
+        padding: 75px 6%;
+    }
+
+    .interior-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .interior-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+
+    .interior-about {
+        grid-template-columns: 1fr;
+    }
+
+    .interior-about-visual {
+        min-height: 350px;
+    }
+
+    .interior-contact {
+        padding: 80px 6%;
+    }
+
+    .interior-contact h2 {
+        font-size: 48px;
+    }
+
+    .interior-footer-top,
+    .interior-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .interior-nav {
+        gap: 14px;
+    }
+
+    .interior-nav a {
+        font-size: 11px;
+    }
+
+    .interior-header-button {
+        padding: 10px 15px;
+    }
+
+    .interior-hero-content h1 {
+        font-size: 45px;
+    }
+
+}
+
+/* PROJECT CARD HOVER EFFECT */
+
+.interior-project-grid {
+    gap: 28px;
+}
+
+.project-image {
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.interior-project-grid .interior-project-card {
+    transition: transform 0.3s ease;
+}
+
+.interior-project-grid .interior-project-card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   ACCESSIBILITY: FOCUS STATES
+========================= */
+
+a:focus-visible {
+    outline: 3px solid #A47C5A;
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+button:focus-visible {
+    outline: 3px solid #A47C5A;
+    outline-offset: 5px;
+}
+
+/* Smooth keyboard navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================
+   ACCESSIBILITY: COLOR CONTRAST
+========================= */
+
+/* Small section labels */
+.interior-tag {
+    color: #625747;
+}
+
+/* General paragraph text */
+.interior-hero-content p,
+.interior-section-heading > p,
+.interior-about-content p,
+.interior-contact p {
+    color: #59564F;
+}
+
+/* Project category labels */
+.project-details span {
+    color: #625747;
+}
+
+/* About text link */
+.interior-text-link {
+    color: #76502E;
+    border-bottom-color: #76502E;
+}
+
+/* Contact section */
+.interior-contact .interior-tag {
+    color: #625747;
+}
